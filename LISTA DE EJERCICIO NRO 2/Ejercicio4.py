@@ -1,7 +1,8 @@
 import sys
+a=sys.argv
 
-def imprimir_argumentos():
-  for argumento in sys.argv[1:]:
-    print(argumento)
+def Argumentos(*args):
+    for arg in args:
+        print(arg)
 
-imprimir_argumentos()
+Argumentos("Datos personales","Rommel y familia",[2,"primos y",2,"hermanos"],{'Estado civil':["soltero]})
