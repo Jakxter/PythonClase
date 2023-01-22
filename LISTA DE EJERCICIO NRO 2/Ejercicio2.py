@@ -15,33 +15,33 @@ Biblioteca={"categorias":{
 }  
 }                    
 
-
 opcion=0
-while opcion != 4:
+while opcion != 5:
     print("Menú de la biblioteca:")
     print("1. Consultar Cartegorias de libros")
     print("2. Nombres de los libros y autores")
     print("3. Prestarse un libro")
-    print("4. Salir")
+    print("4. Usuarios")
+    print("5. Salir")
     opcion = int(input("Selecciona una de las opciones dadas: "))
     
     if opcion == 1:
         categorias=list(Biblioteca["categorias"].keys())
         print("Las Categorias de libros son:")
-        for i in categorias:
-            print("-",i)
+        for A in categorias:
+            print("-",A)
 
     elif opcion == 2:
-        for i in categorias:
-            print(i)
+        for B in categorias:
+            print(B)
         categoria=input("Ingrese categoria a consultar: ")
         for a,b in Biblioteca["categorias"][categoria].items():
             print(a,":", b)
 
     elif opcion == 3:
-        for i in categorias:
-            print(i)
-        categoria=input("Ingrese categoria a consultar: ")
+        for C in categorias:
+            print(C)
+        categoria=input("Ingrese el libro a prestarse: ")
         for a,b in Biblioteca["categorias"][categoria].items():
             print(a,":", b)
         Respuesta=["si"]
@@ -55,10 +55,11 @@ while opcion != 4:
         else:
             print("fin de la consulta")
 
+    elif opcion == 4:
         print("Lista de Usuarios actuales:")
         print(Biblioteca["categorias"]["Usuarios"])
 
-    elif opcion == 4:
+    elif opcion == 5:
         print("Programa terminado \n Gracias")
 
     else:
