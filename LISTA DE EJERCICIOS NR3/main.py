@@ -1,4 +1,7 @@
 from modulo.modulo import suma,dividir
+import sys
+import os
+
 
 def multiplicar2(numero):
     return numero*2
@@ -18,6 +21,15 @@ class Catalogo:
     def mostrar(self):
         for producto in self.productos:
             print(producto.nombre, producto.precio)
+
+class ProductoAuto:
+    def __init__(self,Codigo):
+        self.Codigo=Codigo
+        self.Pais=Codigo.split("-")[0]
+        self.NumLot=Codigo.split("-")[1]
+        self.Año=Codigo.split("-")[2]
+    def __str__(self):
+        return "Pais de origen: "+self.Pais+" - N° de lote: "+self.NumLot
 
 #EJERCICIO 1:
 
@@ -69,13 +81,26 @@ catalogo.agregar(Producto("Onda", 9000))
 catalogo.mostrar()
 
 #EJERCICIO 5:
-Valor1=int(input("Ingrese cuanto numeros quiere suma: "))
+Valor1=int(input("Ingrese cuantos numeros quiere suma: "))
 print("La suma los",Valor1,"primeros numeros es: ",suma(Valor1))
 
-Valor2=int(input("Ingrese el primer numero a dividir: "))
-Valor3=int(input("Ingrese el segundo numero a dividir: "))
-if (Valor2>Valor3):
-    print("La division es: ",dividir(Valor2,Valor3))
+try:
+    Valor2=int(input("Ingrese el primer numero a dividir: "))
+    Valor3=int(input("Ingrese el segundo numero a dividir: "))
+    if (Valor2>Valor3):
+        print("La division es: ",dividir(Valor2,Valor3))
+    else:
+        print("La division es: ",dividir(Valor3,Valor2))
+except ZeroDivisionError:
+        print("Usted a dividido por cero")
 else:
-    print("La division es: ",dividir(Valor3,Valor2))
+        print(os.getcwd())
+finally:
+        print("programa terminado")
 
+#EJERCICIO 6:
+print(sys.argv[0])
+
+#EJERCICIO 7:
+fideo=ProductoAuto("PERU-1125-2013")
+print(fideo)
