@@ -1,3 +1,8 @@
+
+def multiplicar2(numero):
+    return numero*2
+
+
 #EJERCICIO 1:
 
 if (__name__=='__main__'):
@@ -33,4 +38,8 @@ print(texto_en_uppercase)
 texto_en_lowercase = texto.lower()
 print(texto_en_lowercase)
 
-#EJERCICIO3:
+#EJERCICIO 3:
+num = 7
+print(multiplicar2(num))
+
+#EJERCICIO 4:
