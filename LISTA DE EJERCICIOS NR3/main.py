@@ -2,6 +2,21 @@
 def multiplicar2(numero):
     return numero*2
 
+class Producto:
+    def __init__(self, nombre, precio):
+        self.nombre = nombre
+        self.precio = precio
+
+class Catalogo:
+    def __init__(self):
+        self.productos = []
+    
+    def agregar(self, producto):
+        self.productos.append(producto)
+    
+    def mostrar(self):
+        for producto in self.productos:
+            print(producto.nombre, producto.precio)
 
 #EJERCICIO 1:
 
@@ -43,3 +58,11 @@ num = 7
 print(multiplicar2(num))
 
 #EJERCICIO 4:
+catalogo = Catalogo()
+catalogo.agregar(Producto("Toyota", 15000))
+catalogo.agregar(Producto("Audi", 140000))
+catalogo.agregar(Producto("BMV", 14000))
+catalogo.agregar(Producto("Nissan", 13500))
+catalogo.agregar(Producto("Ferrari", 20000))
+catalogo.agregar(Producto("Onda", 9000))
+catalogo.mostrar()
