@@ -1,3 +1,4 @@
+from modulo.modulo import suma,dividir
 
 def multiplicar2(numero):
     return numero*2
@@ -66,3 +67,15 @@ catalogo.agregar(Producto("Nissan", 13500))
 catalogo.agregar(Producto("Ferrari", 20000))
 catalogo.agregar(Producto("Onda", 9000))
 catalogo.mostrar()
+
+#EJERCICIO 5:
+Valor1=int(input("Ingrese cuanto numeros quiere suma: "))
+print("La suma los",Valor1,"primeros numeros es: ",suma(Valor1))
+
+Valor2=int(input("Ingrese el primer numero a dividir: "))
+Valor3=int(input("Ingrese el segundo numero a dividir: "))
+if (Valor2>Valor3):
+    print("La division es: ",dividir(Valor2,Valor3))
+else:
+    print("La division es: ",dividir(Valor3,Valor2))
+
