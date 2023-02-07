@@ -68,12 +68,12 @@ print("\n")
 print("EJERCICIO 4")
 print("-----------------------------------------")
 
-valor = input("Ingrese un valor: ")
+Dato= input("Ingrese un valor: ")
 
 print("-----------------------------------------")
 print("RESULTADO: ")
 
-print(f"-----> El tipo de dato es: {type(Valor1)}")
+print(f"-----> El tipo de dato es: {type(Dato)}")
 
 print("\n")
 
@@ -96,14 +96,14 @@ print("EJERCICIO 6")
 print("-----------------------------------------")
 
 N_veces=int(input("Ingrese la cantidad de veces que quiera sumar: "))
-Suma = 0
+Suma_6 = 0
 for i in range(1, N_veces+1):
-    Suma += i
+    Suma_6 += i
 
 print("-----------------------------------------")
 print("RESULTADO: ")
 
-print("La suma es:", Suma)
+print("La suma es:", Suma_6)
 
 print("\n")
 
@@ -111,17 +111,17 @@ print("\n")
 print("EJERCICIO 7")
 print("-----------------------------------------")
 
-Valor1=int(input("Ingrese el primer valor: "))
-Valor2=int(input("ingrese el segundo: valor: "))
+Numero01=int(input("Ingrese el primer valor: "))
+Numero02=int(input("ingrese el segundo: valor: "))
 
-if Valor1==Valor2:
+if Numero01==Numero02:
     print("---> La igualdad de los 2 valores es verdadera")
-elif Valor1!=Valor2:
+elif Numero01!=Numero02:
     print("---> La desigualdad de los 2 valores es verdadera")
 
-    if Valor1>Valor2:
+    if Numero01>Numero02:
         print("---> El primer valor es mayor ")
-    elif Valor2>=Valor1:
+    elif Numero02>=Numero01:
         print("---> El segundo es mayor igual que el primero")
 
 print("\n")
@@ -133,13 +133,13 @@ print("-----------------------------------------")
 Contraseña=input("ingrese la contraseña que desee almacenar: ")
 ContraIntro=input("Por favor ingrese su contraseña: ")
 
-Valor1=Contraseña.lower()
-Valor2=ContraIntro.lower()
+Original=Contraseña.lower()
+Copia=ContraIntro.lower()
 
 print("-----------------------------------------")
 print("RESULTADO: ")
 
-if Valor1==Valor2:
+if Original==Copia:
     print("Ingreso bien su contraseña")
 else:
     print("Ingreso mal su contraseña")
