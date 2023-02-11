@@ -1,5 +1,10 @@
 from modulo.EJERCICIO1 import *
 from modulo.EJERCICIO2 import *
+from modulo.EJERCICIO4 import *
+
+import sys
+import os
+
 if __name__=='__main__':
 
 
@@ -60,7 +65,7 @@ if __name__=='__main__':
 
         elif opcion == 7:
             print("Programa terminado \n Gracias")
-
+            print("-----------------------------------------")
         else:
             print("ERROR \n Vuelva a digitar una opcion")
 
@@ -72,10 +77,72 @@ if __name__=='__main__':
     VALOR1=int(input("Ingresar un valor a calcular: "))
     print("Resultado:")
     print("El resultado es: ",multiplicar(VALOR1))
-
+    print("-----------------------------------------")
 
 ##---------------PREGUNTA 4--------------------
     print("EJERCICIO 3:")
     print("-----------------------------------------")
 
+class Producto:
+    def __init__(self, nombre, precio):
+        self.nombre = nombre
+        self.precio = precio
+
+class Catalogo:
+    def __init__(self):
+        self.productos = []
     
+    def agregar_producto(self, producto):
+        self.productos.append(producto)
+    
+    def mostrar_productos(self):
+        for producto in self.productos:
+            print(f"Nombre: {producto.nombre} | Precio: {producto.precio}")
+
+catalogo = Catalogo()
+
+producto1 = Producto("Filtro de Aceite", 15.99)
+producto2 = Producto("Bujía", 7.49)
+producto3 = Producto("Alternador", 129.99)
+
+catalogo.agregar_producto(producto1)
+catalogo.agregar_producto(producto2)
+catalogo.agregar_producto(producto3)
+
+catalogo.mostrar_productos()
+print("-----------------------------------------")
+
+##---------------PREGUNTA 5--------------------
+print("EJERCICIO 4:")
+print("-----------------------------------------")
+
+Solucion()
+print("-----------------------------------------")
+
+##---------------PREGUNTA 6--------------------
+print("EJERCICIO 5:")
+print("-----------------------------------------")
+print(f"\nEl nombre del archivo en ejecucion es: {os.path.basename(sys.argv[0])}")
+print("-----------------------------------------")
+
+##---------------PREGUNTA 7--------------------
+print("EJERCICIO 6:")
+print("-----------------------------------------")
+class Producto:
+    def __init__(self, nombre, codigo):
+        self.nombre = nombre
+        self.codigo = codigo
+
+    def __str__(self):
+        return "Producto: {} ({})".format(self.nombre, self.codigo)
+
+    def identificar_origen(self):
+        return self.codigo.split("-")[0]
+
+    def numero_lote(self):
+        return self.codigo.split("-")[1]
+
+p1 = Producto("Producto 1", "PERU-0001-2023")
+print(p1)
+print("País de origen:", p1.identificar_origen())
+print("Número de lote:", p1.numero_lote())
